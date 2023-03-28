@@ -1,0 +1,210 @@
+body {
+    background: linear-gradient(to bottom, rgb(81, 13, 149), #16889f);
+
+}
+
+/* Header */
+.header {
+    /* background-color: #000000; */
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+    /* height: 50px; */
+    display: flex;
+}
+
+.header #izq {
+    width: 10%;
+}
+
+.header #izq #logo {
+    border-radius: 40%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.header #med {
+    width: 80%;
+}
+
+.header #der {
+    width: 10%;
+}
+
+#a-login,
+#a-register {
+    background-color: #6416bd;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #008CBA;
+    color: #000000;
+    border-radius: 10%;
+}
+
+#a-login:hover,
+#a-register:hover {
+    background-color: #b68ce9;
+    color: white;
+}
+
+#Titulo {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Nav */
+#nav li {
+    display: inline;
+    padding: 10px;
+    /* background-color: #000000; */
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Content */
+#content {
+    /* background-color: #000000; */
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+    /* height: 1000px; */
+}
+
+/* Footer */
+.cont-footer {
+    position: fixed;
+    bottom: 0;
+    width: 99.5%;
+    text-align: center;
+    /* background-color: #000000; */
+    color: #000000;
+    left: 0;
+    margin: 5px;
+    height: 50px;
+}
+
+footer {
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/*
+Form imagen
+*/
+
+#form-imagen form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#form-imagen label {
+    font-weight: bold;
+}
+
+#form-imagen input,
+select,
+textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#form-imageninput[type="file"] {
+    margin-bottom: 20px;
+}
+
+#form-imagen button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-imagen button:hover {
+    background-color: #0062cc;
+}
+
+/* .dropzone {
+    border: 2px dashed gray;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+} */
+
+.dropzone {
+    position: relative;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .dropzone input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+
+.dropzone p {
+    font-size: 16px;
+    color: gray;
+}
+
+.dropzone:hover {
+    border-color: black;
+}

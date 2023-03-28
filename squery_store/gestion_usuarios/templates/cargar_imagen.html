@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %} Subir imagen {% endblock %}
+
+{% block content %}
+<div id="form-imagen">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" name="tipo" id="tipo" required>
+
+        <label for="nivel">Nivel:</label>
+        <input type="text" name="nivel" id="nivel" required>
+
+        <label for="imagen">Imagen:</label>
+        <div class="dropzone">
+            <p>Arrastra y suelta la imagen aquí</p>
+            <!-- <input type="file" name="imagen" id="imagen" required> -->
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+        </div>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion" required></textarea>
+
+        <button type="submit" value="cargar">Subir</button>
+    </form>
+</div>
+
+<script>
+    const dropzone = document.querySelector('.dropzone');
+    const fileInput = document.querySelector('#fileInput');
+
+    dropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropzone.classList.add('dragover');
+    });
+
+    dropzone.addEventListener('dragleave', () => {
+        dropzone.classList.remove('dragover');
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+        const file = e.dataTransfer.files[0];
+        fileInput.files = [file];
+    });
+</script>
+{% endblock %}

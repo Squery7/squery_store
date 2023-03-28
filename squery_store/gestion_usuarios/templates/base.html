@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index/index.css' %}">
+    {% block title %} {% endblock %}
+</head>
+
+<body>
+    <div class="header">
+        <div id="izq">
+            <a href="/index/"><img id="logo" src="{% static 'logo.png' %} " alt=""></a>
+
+        </div>
+
+        <div id="med">
+            <h1 id="Titulo">Squery Store</h1>
+        </div>
+
+        <div id="der">
+            <a id="a-login" href="">Login</a>
+            <a id="a-register" href="">Register</a>
+        </div>
+
+    </div>
+
+    <div id="nav">
+
+        <ul>
+            <a href="/index/">
+                <li>Inicio</li>
+            </a>
+            <a href="/biblioteca/">
+                <li>Biblioteca</li>
+            </a>
+            <a href="/perfil/">
+                <li>Perfil</li>
+            </a>
+            <a href="/cargar_imagen/">
+                <li>Cargar imagen</li>
+            </a>
+        </ul>
+
+    </div>
+
+    <div id="content">
+        {% block content %} {% endblock %}
+
+    </div>
+
+    <div class="cont-footer">
+        <footer>
+            <p>© 2021 Squery Store</p>
+        </footer>
+
+    </div>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} {% endblock %}
+
+{% block content %}
+<h2> Biblioteca </h2>
+<div class="card-container">
+    {% for pokemon in pokemones%}
+    <div class="card">
+        {% load static %}
+        <img src="{% static pokemon.imagen %}" alt="{{ pokemon.nombre }}">
+        <h2>Nombre: {{pokemon.nombre}}</h2>
+        <p>Descripción: {{pokemon.descripcion}}</p>
+        <p>Tipo: {{pokemon.tipo}}</p>
+        <p>Nivel: {{pokemon.nivel}}</p>
+        <button>Agregar al carrito</button>
+    </div>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}
