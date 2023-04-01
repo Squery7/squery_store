@@ -3,8 +3,9 @@
 {% block title %} Subir imagen {% endblock %}
 
 {% block content %}
+<h1>Registro</h1>
 <div id="form-imagen">
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data" autocomplete="off">
         {% csrf_token %}
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" required>

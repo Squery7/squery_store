@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+
+<h1>Registro</h1>
+{% if messages %}
+<div class="alert alert-error">
+    <strong style="color:red">No Record Found</strong>
+</div>
+{% endif %}
+
+<div id="form-imagen">
+    <form method="POST" enctype="multipart/form-data" autocomplete="off">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" required>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <button type="submit" value="registrarse">Registro</button>
+    </form>
+</div>
+
+{% endblock %}

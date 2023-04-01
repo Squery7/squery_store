@@ -19,8 +19,11 @@ from gestion_usuarios import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
     path('index/', views.index, name = 'index'),
     path('biblioteca/', views.biblioteca, name = 'biblioteca'),
     path('perfil/', views.perfil, name = 'perfil'),
     path('cargar_imagen/', views.subir_producto, name = 'subir_producto'),
+    path('login/', views.login, name = 'login'),
+    path('registro/', views.registro, name = 'registro'),
 ]

@@ -7,3 +7,11 @@ class Pokemon(models.Model):
     nivel = models.IntegerField()
     imagen = models.ImageField(upload_to='images/')
     descripcion = models.CharField(max_length=300)
+
+class Usuario(models.Model):
+    nombre = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
+    usuario = models.CharField(max_length=30)
+    email = models.EmailField(primary_key=True)
+    password = models.CharField(max_length=50)
+    
